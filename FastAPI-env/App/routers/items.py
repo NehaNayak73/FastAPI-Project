@@ -5,6 +5,10 @@ from datetime import datetime
 
 router = APIRouter()
 
+@router.get("/")
+async def read_items():
+    return [{"item_id": 1, "name": "Item 1"}, {"item_id": 2, "name": "Item 2"}]
+
 @router.post("/items/", response_model=str, summary="Create a new item")
 async def create_item_api(item: Item):
     item_id = await create_item(item)

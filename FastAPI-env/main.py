@@ -1,8 +1,6 @@
 import os
 from fastapi import FastAPI, APIRouter
-from App.routers import items, clock_in
-
-
+from App.routers import items, clock_in  # Ensure 'App' is correctly spelled
 
 app = FastAPI()
 router = APIRouter()
